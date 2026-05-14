@@ -1196,7 +1196,7 @@ footer {
   }
   .projects-grid {
     grid-template-columns: 1fr;
-  
+    max-height: 50vh;
     overflow: auto;
   }
 
