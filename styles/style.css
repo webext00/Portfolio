@@ -1195,6 +1195,7 @@ footer {
     padding: 5rem 5%;
     max-height: 200vh;
     overflow: auto;
+    
   }
   .projects-grid {
     grid-template-columns: 1fr;
