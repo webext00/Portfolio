@@ -688,11 +688,10 @@ nav {
 }
 
 .about-card {
-  position: absolute;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.5rem;
+position: absolute;
+
+    border-radius: 16px;
+    padding: 1.5rem;
 }
 .about-card-main {
   top: 0;
@@ -1194,10 +1193,12 @@ footer {
   #projects {
     padding: 5rem 5%;
   }
+
   .projects-grid {
     grid-template-columns: 1fr;
     max-height: 57vh;
     overflow: auto;
+
   }
 
   #process {
