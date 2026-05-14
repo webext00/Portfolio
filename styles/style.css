@@ -1193,12 +1193,11 @@ footer {
 
   #projects {
     padding: 5rem 5%;
-
   }
   .projects-grid {
-            grid-template-columns: 1fr;
-        max-height: 100vh;
-        overflow: auto;
+    grid-template-columns: 1fr;
+    max-height: 50vh;
+    overflow: auto;
   }
 
   #process {
