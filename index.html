@@ -1,283 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Webext — Web Design & Development</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WebExt — Web Design & Development</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
 <!-- NAV -->
-<nav id="navbar">
-  <a href="#home" class="nav-logo">
-    <div class="nav-logo-icon">
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="logo-icon">
+      <div class="slant"></div>
       <div class="sq"></div>
-      <div class="diag"></div>
     </div>
-    <span>webext</span>
+    WebExt
   </a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
   </ul>
-  <a href="#contact" class="nav-cta">Get in touch</a>
-  <div class="hamburger" id="hamburger" onclick="toggleNav()">
+  <div class="hamburger" id="hamburger">
     <span></span><span></span><span></span>
   </div>
 </nav>
 
 <!-- HERO -->
-<section id="home">
-  <div class="hero-bg">
-    <div class="hero-bg-circle c1"></div>
-    <div class="hero-bg-circle c2"></div>
-    <div class="hero-bg-dot" style="top:20%;left:10%"></div>
-    <div class="hero-bg-dot" style="top:60%;left:5%"></div>
-    <div class="hero-bg-dot" style="top:80%;left:20%"></div>
-    <div class="hero-bg-dot" style="top:30%;left:50%"></div>
-  </div>
-  <div class="hero-grid">
-    <div class="hero-content fade-up">
-      <div class="hero-tag">
-        <span class="dot"></span>
-        Available for projects
-      </div>
-      <h1 class="hero-title">
-        We Build Websites<br/>
-        That <span class="accent">Work</span> &<br/>
-        <span class="accent2">Impress</span>
-      </h1>
-      <p class="hero-desc">
-        Webext crafts clean, modern, and mobile-friendly websites for businesses, startups, and individuals. From landing pages to full business sites — we've got you covered.
-      </p>
-      <div class="hero-btns">
-        <a href="#portfolio" class="btn-primary">View Our Work →</a>
-        <a href="#contact" class="btn-secondary">Let's Talk</a>
-      </div>
-      <div class="hero-stats">
-        <div>
-          <div class="stat-num">HTML<span>·</span>CSS</div>
-          <div class="stat-label">Core technologies</div>
-        </div>
-        <div>
-          <div class="stat-num">100<span>%</span></div>
-          <div class="stat-label">Mobile friendly</div>
-        </div>
-        <div>
-          <div class="stat-num">Fast<span>.</span></div>
-          <div class="stat-label">Delivery guaranteed</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-visual fade-up" style="transition-delay:0.2s">
-      <div class="hero-badge b1">
-        <div class="badge-icon blue">✦</div>
-        <div>
-          <div style="font-weight:500;font-size:0.85rem">Clean Code</div>
-          <div style="color:var(--muted);font-size:0.75rem">Always structured</div>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="card-header">
-          <div class="card-dot r"></div>
-          <div class="card-dot y"></div>
-          <div class="card-dot g"></div>
-          <div style="margin-left:8px;font-size:0.75rem;color:var(--dim)">index.html</div>
-        </div>
-        <div class="code-line blue full"></div>
-        <div class="code-line med" style="margin-left:16px"></div>
-        <div class="code-line purple short" style="margin-left:32px"></div>
-        <div class="code-line short" style="margin-left:32px"></div>
-        <div class="code-line med" style="margin-left:16px"></div>
-        <div class="code-line blue xs" style="margin-left:16px"></div>
-        <div style="height:1px;background:var(--border);margin:1rem 0"></div>
-        <div class="code-line purple full"></div>
-        <div class="code-line med" style="margin-left:16px"></div>
-        <div class="code-line blue short" style="margin-left:32px"></div>
-        <div class="code-line full" style="margin-left:16px"></div>
-        <div class="code-line purple med" style="margin-left:16px"></div>
-      </div>
-      <div class="hero-badge b2">
-        <div class="badge-icon purple">◈</div>
-        <div>
-          <div style="font-weight:500;font-size:0.85rem">Responsive Design</div>
-          <div style="color:var(--muted);font-size:0.75rem">Every screen size</div>
-        </div>
-      </div>
+<section id="hero">
+  <div class="hero-bg-orb orb1"></div>
+  <div class="hero-bg-orb orb2"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span></span>Available for Projects</div>
+    <h1 class="hero-title">
+      Building Websites<br>That <span class="grad">Make an Impact</span>
+    </h1>
+    <p class="hero-sub">WebExt crafts fast, beautiful, and conversion-driven websites for businesses and brands ready to stand out online.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">View My Work</a>
+      <a href="#contact" class="btn-ghost">Let's Talk</a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-visual">
-        <div class="about-ring r2"></div>
-        <div class="about-ring r1"></div>
-        <div class="about-logo-big">
-          <div class="about-logo-icon">
-            <div class="sq"></div>
-            <div class="diag"></div>
-          </div>
-          <div class="about-logo-text">webext</div>
-        </div>
-        <div class="about-skill-dot" style="top:20%;left:5%">HTML</div>
-        <div class="about-skill-dot" style="top:20%;right:5%">CSS</div>
-        <div class="about-skill-dot" style="bottom:20%;left:5%">JS</div>
-        <div class="about-skill-dot" style="bottom:20%;right:5%">UI</div>
-      </div>
-      <div class="about-content fade-up">
-        <div class="section-tag">About Webext</div>
-        <h2 class="section-title">Turning ideas into digital reality</h2>
-        <p>Webext is a web design studio focused on building clean, fast, and beautiful websites. We believe every business deserves a professional online presence — no matter the size or budget.</p>
-        <p>We specialize in creating websites that not only look great but also convert visitors into customers. Every project is crafted with attention to detail, mobile-first design, and clean code.</p>
-        <div class="skills-list">
-          <span class="skill-pill">HTML5</span>
-          <span class="skill-pill">CSS3</span>
-          <span class="skill-pill">JavaScript</span>
-          <span class="skill-pill purple">Responsive Design</span>
-          <span class="skill-pill purple">UI Design</span>
-          <span class="skill-pill">Web Performance</span>
-          <span class="skill-pill">SEO Basics</span>
-        </div>
-      </div>
+<!-- STATS -->
+<section id="stats">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <span class="stat-num" data-count="20">0</span>
+      <div class="stat-label">Projects Delivered</div>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-num" data-count="100">0</span>
+      <div class="stat-label">Client Satisfaction %</div>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-num" data-count="3">0</span>
+      <div class="stat-label">Years Building</div>
+    </div>
+    <div class="stat-item reveal">
+      <span class="stat-num" data-count="48">0</span>
+      <div class="stat-label">Hour Turnaround</div>
     </div>
   </div>
 </section>
 
 <!-- SERVICES -->
 <section id="services">
-  <div class="section-inner">
-    <div class="services-header fade-up">
-      <div class="section-tag">What We Do</div>
-      <h2 class="section-title">Services built for<br/>your business growth</h2>
-      <p class="section-sub">We offer end-to-end web solutions that help businesses establish a strong online presence.</p>
+  <span class="section-tag">What I Do</span>
+  <h2 class="section-title reveal">Services Built<br>for Growth</h2>
+  <p class="section-sub reveal">Every website I build is crafted with attention to detail, performance, and your business goals.</p>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-icon">🎨</div>
+      <div class="service-title">Landing Pages</div>
+      <p class="service-desc">High-converting landing pages designed to turn visitors into customers. Clean, fast, and focused.</p>
     </div>
-    <div class="services-grid">
-      <div class="service-card fade-up">
-        <div class="service-icon">🎨</div>
-        <div class="service-title">Website Design</div>
-        <div class="service-desc">Custom-designed websites tailored to your brand identity. Clean, modern, and built to impress your visitors from the first second.</div>
-        <ul class="service-features">
-          <li>Custom design from scratch</li>
-          <li>Brand-consistent visuals</li>
-          <li>Multi-page websites</li>
-          <li>Cross-browser compatible</li>
-        </ul>
+    <div class="service-card reveal">
+      <div class="service-icon">🏢</div>
+      <div class="service-title">Business Websites</div>
+      <p class="service-desc">Professional multi-page websites for businesses that need a strong online presence and trust.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">🛍️</div>
+      <div class="service-title">Portfolio Sites</div>
+      <p class="service-desc">Showcase your work beautifully. Stand out from the crowd with a unique, personal portfolio.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">📱</div>
+      <div class="service-title">Responsive Design</div>
+      <p class="service-desc">Pixel-perfect on every device — mobile, tablet, and desktop. No compromises on any screen.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">⚡</div>
+      <div class="service-title">Performance Optimization</div>
+      <p class="service-desc">Fast-loading, SEO-ready websites that Google loves and users enjoy. Speed = more business.</p>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">🔧</div>
+      <div class="service-title">Website Revamps</div>
+      <p class="service-desc">Got an outdated website? I'll transform it into a modern, attractive, high-performing site.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <span class="section-tag">Portfolio</span>
+  <h2 class="section-title reveal">Recent Work</h2>
+  <p class="section-sub reveal">A few examples of what I build. Every project is custom-made — no templates.</p>
+
+  <div class="projects-grid">
+    <div class="project-card reveal">
+      <div class="project-thumb thumb1">
+        <div class="thumb-label">Retail Brand</div>
+        <div class="project-tag">Landing Page</div>
+        <span style="font-size:3rem">🛒</span>
       </div>
-      <div class="service-card fade-up" style="transition-delay:0.1s">
-        <div class="service-icon purple">⚡</div>
-        <div class="service-title">Landing Pages</div>
-        <div class="service-desc">High-converting landing pages designed to turn visitors into leads and customers. Perfect for campaigns, product launches, and promotions.</div>
-        <ul class="service-features">
-          <li>Conversion-focused design</li>
-          <li>Fast loading speed</li>
-          <li>Clear call-to-actions</li>
-          <li>A/B test ready</li>
-        </ul>
+      <div class="project-body">
+        <div class="project-name">ShopFresh — E-Commerce Landing</div>
+        <p class="project-desc">A bold product landing page for a local grocery brand with a cart and promotional sections.</p>
+        <div class="project-stack">
+          <span class="stack-pill">HTML</span>
+          <span class="stack-pill">CSS</span>
+          <span class="stack-pill">JavaScript</span>
+        </div>
       </div>
-      <div class="service-card fade-up" style="transition-delay:0.2s">
-        <div class="service-icon">🏢</div>
-        <div class="service-title">Business Websites</div>
-        <div class="service-desc">Complete business website solutions for local businesses, startups, and companies looking to establish a credible online presence.</div>
-        <ul class="service-features">
-          <li>Professional multi-page site</li>
-          <li>Contact forms included</li>
-          <li>Google Maps integration</li>
-          <li>Mobile-first approach</li>
-        </ul>
+    </div>
+    <div class="project-card reveal">
+      <div class="project-thumb thumb2">
+        <div class="thumb-label">Tech Startup</div>
+        <div class="project-tag">Business Site</div>
+        <span style="font-size:3rem">🚀</span>
+      </div>
+      <div class="project-body">
+        <div class="project-name">NovaTech — Startup Website</div>
+        <p class="project-desc">Full multi-page website for a tech startup with animations, contact form, and service pages.</p>
+        <div class="project-stack">
+          <span class="stack-pill">HTML</span>
+          <span class="stack-pill">CSS</span>
+          <span class="stack-pill">JavaScript</span>
+        </div>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <div class="project-thumb thumb3">
+        <div class="thumb-label">Restaurant</div>
+        <div class="project-tag">Portfolio</div>
+        <span style="font-size:3rem">🍽️</span>
+      </div>
+      <div class="project-body">
+        <div class="project-name">SpiceRoute — Restaurant Website</div>
+        <p class="project-desc">Elegant website for a restaurant chain with menu, gallery, reservations, and map integration.</p>
+        <div class="project-stack">
+          <span class="stack-pill">HTML</span>
+          <span class="stack-pill">CSS</span>
+          <span class="stack-pill">JavaScript</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <div class="section-inner">
-    <div class="portfolio-header fade-up">
-      <div>
-        <div class="section-tag">Our Work</div>
-        <h2 class="section-title">Recent projects</h2>
-      </div>
-      <p class="section-sub" style="max-width:300px">More projects coming soon as we grow. These are our demo builds.</p>
+<!-- PROCESS -->
+<section id="process">
+  <span class="section-tag">How It Works</span>
+  <h2 class="section-title reveal">Simple. Smooth.<br>No Surprises.</h2>
+  <p class="section-sub reveal">My process is designed to be stress-free for you from day one to launch.</p>
+
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="step-num">01</div>
+      <div class="step-title">Discovery Call</div>
+      <p class="step-desc">We talk about your goals, brand, and what you need. Free consultation, no pressure.</p>
     </div>
-    <div class="portfolio-grid">
-      <div class="portfolio-card fade-up">
-        <div class="portfolio-thumb t1">
-          <div class="mock-browser">
-            <div class="mock-bar">
-              <div class="mock-dot r"></div>
-              <div class="mock-dot y"></div>
-              <div class="mock-dot g"></div>
-            </div>
-            <div class="mock-content">
-              <div class="mock-line blue" style="width:50%;height:10px;margin-bottom:10px"></div>
-              <div class="mock-line w80"></div>
-              <div class="mock-line w60"></div>
-              <div class="mock-line blue w40" style="margin-top:8px;height:20px;border-radius:10px"></div>
-            </div>
-          </div>
+    <div class="process-step reveal">
+      <div class="step-num">02</div>
+      <div class="step-title">Design & Plan</div>
+      <p class="step-desc">I create a design direction and layout plan tailored to your brand and audience.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">03</div>
+      <div class="step-title">Build & Refine</div>
+      <p class="step-desc">I code your website with regular check-ins and revisions until it's perfect.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">04</div>
+      <div class="step-title">Launch 🚀</div>
+      <p class="step-desc">We go live! I handle deployment and make sure everything runs flawlessly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual">
+      <div class="about-card about-card-main reveal">
+        <div class="about-logo-big">
+          <div class="slant"></div>
+          <div class="sq"></div>
         </div>
-        <div class="portfolio-info">
-          <div class="portfolio-tag">Restaurant</div>
-          <div class="portfolio-name">Spice Garden Website</div>
-          <div class="portfolio-tech">HTML · CSS · JavaScript</div>
+        <div class="brand-name">WebExt</div>
+        <div class="brand-tagline">Web Design & Development Studio</div>
+      </div>
+      <div class="about-card about-card-sm1 reveal">
+        <div class="sm-icon">🎯</div>
+        <div>
+          <div class="sm-label">Focus</div>
+          <div class="sm-val">Results-Driven</div>
         </div>
       </div>
-      <div class="portfolio-card fade-up" style="transition-delay:0.1s">
-        <div class="portfolio-thumb t2">
-          <div class="mock-browser">
-            <div class="mock-bar">
-              <div class="mock-dot r"></div>
-              <div class="mock-dot y"></div>
-              <div class="mock-dot g"></div>
-            </div>
-            <div class="mock-content">
-              <div class="mock-line purple" style="width:60%;height:10px;margin-bottom:10px"></div>
-              <div class="mock-line w80"></div>
-              <div class="mock-line w40"></div>
-              <div style="display:flex;gap:6px;margin-top:8px">
-                <div class="mock-line purple" style="width:40%;height:20px;border-radius:10px"></div>
-                <div class="mock-line" style="width:40%;height:20px;border-radius:10px"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <div class="portfolio-tag">Fitness</div>
-          <div class="portfolio-name">FitZone Gym Landing Page</div>
-          <div class="portfolio-tech">HTML · CSS · JavaScript</div>
+      <div class="about-card about-card-sm2 reveal">
+        <div class="sm-icon">📍</div>
+        <div>
+          <div class="sm-label">Location</div>
+          <div class="sm-val">India 🇮🇳</div>
         </div>
       </div>
-      <div class="portfolio-card fade-up" style="transition-delay:0.2s">
-        <div class="portfolio-thumb t3">
-          <div class="mock-browser">
-            <div class="mock-bar">
-              <div class="mock-dot r"></div>
-              <div class="mock-dot y"></div>
-              <div class="mock-dot g"></div>
-            </div>
-            <div class="mock-content">
-              <div class="mock-line" style="background:rgba(29,158,117,0.5);width:55%;height:10px;margin-bottom:10px"></div>
-              <div class="mock-line w80"></div>
-              <div class="mock-line w60"></div>
-              <div class="mock-line" style="background:rgba(29,158,117,0.4);width:35%;height:20px;border-radius:10px;margin-top:8px"></div>
-            </div>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <div class="portfolio-tag">Beauty <span class="coming-soon-badge">Demo</span></div>
-          <div class="portfolio-name">Glow Salon Business Site</div>
-          <div class="portfolio-tech">HTML · CSS · JavaScript</div>
-        </div>
+    </div>
+    <div class="about-text">
+      <span class="section-tag">About WebExt</span>
+      <h2 class="section-title reveal">A Studio That<br>Cares About Results</h2>
+      <p class="section-sub reveal">WebExt is a freelance web design studio focused on building beautiful, fast, and purposeful websites. I combine clean code with strong design to help businesses grow their online presence.</p>
+      <p class="section-sub reveal" style="margin-top:1rem">Every website I create is built from scratch — tailored to your brand, not templated. I take pride in communication, quality, and delivering on time.</p>
+      <div class="skills-list reveal">
+        <span class="skill-tag">HTML5</span>
+        <span class="skill-tag">CSS3</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Responsive Design</span>
+        <span class="skill-tag">UI/UX Design</span>
+        <span class="skill-tag">Animations</span>
+        <span class="skill-tag">SEO Basics</span>
+        <span class="skill-tag">Performance</span>
       </div>
     </div>
   </div>
@@ -285,109 +249,158 @@
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-inner">
-    <div class="contact-grid">
-      <div class="fade-up">
-        <div class="section-tag">Get In Touch</div>
-        <h2 class="section-title">Let's build something great together</h2>
-        <div class="contact-info">
-          <p>Have a project in mind? We'd love to hear about it. Send us a message and we'll get back to you as soon as possible.</p>
-          <div class="contact-items">
-            <div class="contact-item">
-              <div class="contact-item-icon">📧</div>
-              <div>
-                <div class="contact-item-label">Email us</div>
-                <div class="contact-item-val">hello@webext.in</div>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">📱</div>
-              <div>
-                <div class="contact-item-label">Instagram</div>
-                <div class="contact-item-val">@webext</div>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">📍</div>
-              <div>
-                <div class="contact-item-label">Location</div>
-                <div class="contact-item-val">India · Remote Worldwide</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="fade-up" style="transition-delay:0.15s">
-        <div class="contact-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Your name</label>
-              <input type="text" placeholder="John Doe"/>
-            </div>
-            <div class="form-group">
-              <label>Email address</label>
-              <input type="email" placeholder="john@email.com"/>
-            </div>
+  <div class="contact-wrap">
+    <span class="section-tag">Get In Touch</span>
+    <h2 class="section-title reveal">Ready to Build<br>Something Great?</h2>
+    <p class="section-sub reveal" style="margin:0 auto">Tell me about your project. I'll get back to you within 24 hours with a plan and a quote.</p>
+
+    <div class="contact-card reveal">
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="Rahul Kumar">
           </div>
           <div class="form-group">
-            <label>Subject</label>
-            <input type="text" placeholder="I need a website for my business"/>
+            <label>Email Address</label>
+            <input type="email" placeholder="you@email.com">
           </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea rows="5" placeholder="Tell us about your project..."></textarea>
-          </div>
-          <button class="form-submit" onclick="handleSubmit(this)">
-            Send Message →
-          </button>
         </div>
+        <div class="form-group">
+          <label>Project Type</label>
+          <select>
+            <option value="">Select a service…</option>
+            <option>Landing Page</option>
+            <option>Business Website</option>
+            <option>Portfolio Site</option>
+            <option>Website Revamp</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tell Me About Your Project</label>
+          <textarea placeholder="Describe your website idea, goals, or any details you have…"></textarea>
+        </div>
+        <button class="form-submit" onclick="handleSubmit(this)">Send Message →</button>
       </div>
+    </div>
+
+    <div class="social-row reveal">
+      <a href="#" class="social-link">📘 Facebook</a>
+      <a href="#" class="social-link">📸 Instagram</a>
+      <a href="mailto:hello@webext.in" class="social-link">✉️ Email</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">
-    <div class="nav-logo-icon" style="width:24px;height:24px">
-      <div class="sq" style="width:13px;height:13px"></div>
-      <div class="diag" style="border-left-width:10px;border-bottom-width:16px"></div>
+  <div class="footer-inner">
+
+    <!-- TOP GRID -->
+    <div class="footer-grid">
+
+      <!-- Brand col -->
+      <div class="footer-brand-col">
+        <a class="footer-logo" href="#">
+          <div class="logo-icon">
+            <div class="slant"></div>
+            <div class="sq"></div>
+          </div>
+          WebExt
+        </a>
+        <p class="footer-desc">Building fast, beautiful, and results-driven websites for businesses and brands ready to grow online.</p>
+        <div class="footer-socials">
+          <a href="#" class="fsocial" title="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="fsocial" title="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="mailto:hello@webext.in" class="fsocial" title="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <a href="https://wa.me/91XXXXXXXXXX" class="fsocial" title="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 0C5.372 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.827L.057 23.998l6.328-1.656A11.95 11.95 0 0 0 12 24c6.626 0 12-5.372 12-12S18.624 0 11.998 0zm.002 21.818a9.818 9.818 0 0 1-5.001-1.368l-.36-.213-3.714.974.99-3.617-.235-.373A9.808 9.808 0 0 1 2.18 12c0-5.415 4.404-9.818 9.82-9.818 5.416 0 9.818 4.403 9.818 9.818 0 5.416-4.402 9.818-9.818 9.818z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Services col -->
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Landing Pages</a></li>
+          <li><a href="#services">Business Websites</a></li>
+          <li><a href="#services">Portfolio Sites</a></li>
+          <li><a href="#services">Responsive Design</a></li>
+          <li><a href="#services">Website Revamps</a></li>
+          <li><a href="#services">Performance Optimization</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links col -->
+      <div class="footer-col">
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Hire Me</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact col -->
+      <div class="footer-col">
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links footer-contact-list">
+          <li>
+            <span class="fc-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </span>
+            <a href="mailto:hello@webext.in">hello@webext.in</a>
+          </li>
+          <li>
+            <span class="fc-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <span>India 🇮🇳</span>
+          </li>
+          <li>
+            <span class="fc-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <span>Mon – Sat, 9am – 8pm IST</span>
+          </li>
+          <li>
+            <span class="fc-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 0C5.372 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.827L.057 23.998l6.328-1.656A11.95 11.95 0 0 0 12 24c6.626 0 12-5.372 12-12S18.624 0 11.998 0zm.002 21.818a9.818 9.818 0 0 1-5.001-1.368l-.36-.213-3.714.974.99-3.617-.235-.373A9.808 9.808 0 0 1 2.18 12c0-5.415 4.404-9.818 9.82-9.818 5.416 0 9.818 4.403 9.818 9.818 0 5.416-4.402 9.818-9.818 9.818z"/></svg>
+            </span>
+            <a href="https://wa.me/91XXXXXXXXXX">WhatsApp Me</a>
+          </li>
+        </ul>
+      </div>
+
     </div>
-    webext
-  </div>
-  <div class="footer-copy">© 2025 Webext. All rights reserved.</div>
-  <div class="footer-links">
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact">Contact</a>
+
+    <!-- DIVIDER -->
+    <div class="footer-divider"></div>
+
+    <!-- BOTTOM BAR -->
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 <span class="grad-text">WebExt</span>. All rights reserved. Built with ❤️ in India.</div>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#contact">Get a Quote</a>
+      </div>
+    </div>
+
   </div>
 </footer>
 
-<script>
-  function toggleNav() {
-    document.getElementById('navLinks').classList.toggle('open');
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('navbar');
-    nav.style.background = window.scrollY > 50
-      ? 'rgba(13,27,42,0.98)' : 'rgba(13,27,42,0.85)';
-  });
-
-  function handleSubmit(btn) {
-    btn.textContent = 'Message Sent! ✓';
-    btn.style.background = '#1D9E75';
-    setTimeout(() => {
-      btn.textContent = 'Send Message →';
-      btn.style.background = '';
-    }, 3000);
-  }
-</script>
+<script src="script.js"></script>
 </body>
 </html>
