@@ -1193,8 +1193,12 @@ footer {
   #projects {
     padding: 5rem 5%;
   }
+<<<<<<< HEAD
 
   .projects-grid {
+=======
+ .projects-grid {
+>>>>>>> a3faa6fa3450da268bfafc14bc769a6007d70392
     grid-template-columns: 1fr;
     max-height: 57vh;
     overflow: auto;
