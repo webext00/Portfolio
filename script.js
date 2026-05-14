@@ -62,3 +62,8 @@
       btn.style.background = '';
     }, 3000);
   }
+  // project imsge slide
+  document.addEventListener( 'DOMContentLoaded', function () {
+    new Splide( '#image-slider' ).mount();
+  } );
+  new Splide( '#image-slider' ).mount();
